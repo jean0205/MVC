@@ -1,0 +1,39 @@
+﻿
+@model List<MVC.Models.TableViewModel.UserTableViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Usuarios</h2>
+<div class="row">
+    <div class=" col-lg-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>Id</th>
+                <th>User</th>
+                <th>Edad</th>
+            </tr>
+
+            @if (Model == null)
+            {
+                <span>no items found</span>
+            }
+            else
+            {
+                foreach (var oElement in Model)
+                {
+                    <tr>
+                        <td>@oElement.id</td>
+                        <td>@oElement.userName</td>
+                        <td>@oElement.edad</td>
+                    </tr>
+                }
+            }
+
+        </table>
+
+    </div>
+
+
+</div>
+
